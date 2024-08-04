@@ -1,29 +1,40 @@
-# Build aşaması
-FROM maven:3.8.5-openjdk-21 AS build_stage
-
-# Çalışma dizinini ayarla
-WORKDIR /app
-
-# Maven bağımlılıklarını yükle
-COPY pom.xml ./
-COPY src ./src
-RUN mvn clean package
-
-# Çalıştırma aşaması
-FROM eclipse-temurin:21
-
-# Çalışma dizinini ayarla
-WORKDIR /app
-
-# Build edilen JAR dosyasını kopyala
-COPY --from=build_stage /app/target/nlp-0.0.1-SNAPSHOT.jar /app/backend.jar
-
-# Diğer dosyaları kopyala
-COPY libs /app/libs
-COPY data /app/data
-
-# Portu aç
-EXPOSE 8080
-
-# Uygulamayı başlat
-ENTRYPOINT ["java", "-jar", "backend.jar"]
+##TODO: 2024-08-04 19:05:24 2024-08-04T16:05:24.524Z ERROR 1 --- [nlp] [nio-8080-exec-9] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Handler dispatch failed: java.lang.NoClassDefFoundError: zemberek/morphology/TurkishMorphology] with root cause
+#       #2024-08-04 19:05:24
+#       #2024-08-04 19:05:24 java.lang.ClassNotFoundException: zemberek.morphology.TurkishMorphology
+#
+## Build aşaması
+#FROM maven:3.9.8-eclipse-temurin-21 AS build_stage
+#
+## Çalışma dizinini ayarla
+#WORKDIR /app
+#
+## Maven bağımlılıklarını yükle
+#COPY pom.xml ./
+#COPY src ./src
+#COPY libs ./libs
+#
+#RUN mvn clean package
+#
+## Çalıştırma aşaması
+#FROM eclipse-temurin:21
+##FROM openjdk:21-jdk-slim
+#
+## Çalışma dizinini ayarla
+#WORKDIR /app
+#
+## Build edilen JAR dosyasını kopyala
+#COPY --from=build_stage /app/target/nlp-0.0.1-SNAPSHOT.jar /app/backend.jar
+#
+## Libs ve data dizinlerini kopyala
+#COPY --from=build_stage /app/libs /app/libs
+##COPY --from=build_stage /app/data /app/data
+## Diğer dosyaları kopyala
+##COPY libs /app/libs/
+##COPY /libs /app/libs/
+#COPY /data /app/data/
+#
+## Portu aç
+#EXPOSE 8080
+#
+## Uygulamayı başlat
+#ENTRYPOINT ["java", "-jar", "backend.jar"]

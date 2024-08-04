@@ -24,7 +24,7 @@ services:
     depends_on:
       - backend
 
-
+#
 #  backendbuild:
 #    build:
 #      context: ../../backend/nlp
@@ -39,11 +39,12 @@ services:
 #      context: ../../frontend/vanitas-front
 #      dockerfile: Dockerfile_frontendbuild
 #    ports:
-#      - "3000:3000"
+#      - "80:80"
 #    container_name: frontend_container_build
 #    image: frontendbuild:latest
 #    depends_on:
 #      - backendbuild
+#  docker-compose build --no-cache
 
 # docker-compose up my_script
 # docker build --build-arg LATITUDE=40 --build-arg LONGITUDE=30 --build-arg INTENSITY=80 -t my_script1 -f Dockerfile_script .
