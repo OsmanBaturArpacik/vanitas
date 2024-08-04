@@ -1,0 +1,29 @@
+# Build aşaması
+FROM maven:3.8.5-openjdk-21 AS build_stage
+
+# Çalışma dizinini ayarla
+WORKDIR /app
+
+# Maven bağımlılıklarını yükle
+COPY pom.xml ./
+COPY src ./src
+RUN mvn clean package
+
+# Çalıştırma aşaması
+FROM eclipse-temurin:21
+
+# Çalışma dizinini ayarla
+WORKDIR /app
+
+# Build edilen JAR dosyasını kopyala
+COPY --from=build_stage /app/target/nlp-0.0.1-SNAPSHOT.jar /app/backend.jar
+
+# Diğer dosyaları kopyala
+COPY libs /app/libs
+COPY data /app/data
+
+# Portu aç
+EXPOSE 8080
+
+# Uygulamayı başlat
+ENTRYPOINT ["java", "-jar", "backend.jar"]

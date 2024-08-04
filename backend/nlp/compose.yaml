@@ -1,0 +1,56 @@
+version: '3'
+services:
+
+  backend:
+    build:
+      context: ../../backend/nlp
+      dockerfile: Dockerfile_backend
+    ports:
+      - "8080:8080"
+    container_name: backend_container
+    image: backend:latest
+#    environment:
+#      - SPRING_PROFILES_ACTIVE=test
+##  docker run -e SPRING_PROFILES_ACTIVE=test -p 8080:8080 myapp:latest
+
+  frontend:
+    build:
+      context: ../../frontend/vanitas-front
+      dockerfile: Dockerfile_frontend
+    ports:
+      - "3000:3000"
+    container_name: frontend_container
+    image: frontend:latest
+    depends_on:
+      - backend
+
+
+#  backendbuild:
+#    build:
+#      context: ../../backend/nlp
+#      dockerfile: Dockerfile_backendbuild
+#    ports:
+#      - "8080:8080"
+#    container_name: backend_container_build
+#    image: backendbuild:latest
+#
+#  frontendbuild:
+#    build:
+#      context: ../../frontend/vanitas-front
+#      dockerfile: Dockerfile_frontendbuild
+#    ports:
+#      - "3000:3000"
+#    container_name: frontend_container_build
+#    image: frontendbuild:latest
+#    depends_on:
+#      - backendbuild
+
+# docker-compose up my_script
+# docker build --build-arg LATITUDE=40 --build-arg LONGITUDE=30 --build-arg INTENSITY=80 -t my_script1 -f Dockerfile_script .
+# docker build -t my_script2 -f Dockerfile_script .
+# docker-compose run --env LATITUDE=50 --env LONGITUDE=60 --env INTENSITY=90 my_script
+#  docker-compose run --env LATITUDE=50 --env LONGITUDE=60 --env INTENSITY=70 my_script
+#  docker-compose restart my_script
+# docker-compose stop my_script sonsuz donguden cikmak icin tekrar baslatmak icin restart
+# docker-compose up -d my_script
+# docker-compose down

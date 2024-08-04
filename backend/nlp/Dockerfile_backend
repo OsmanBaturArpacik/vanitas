@@ -1,0 +1,37 @@
+# ./mvnw clean package - pre build
+# mvnw.cmd clean package - pre build
+
+FROM eclipse-temurin:21
+WORKDIR /app
+COPY libs /app/libs
+COPY data /app/data
+COPY target/nlp-0.0.1-SNAPSHOT.jar /app/backend.jar
+EXPOSE 8080
+ENTRYPOINT ["java", "-jar", "backend.jar"]
+
+
+
+
+
+
+
+
+
+
+
+#ENV SPRING_PROFILES_ACTIVE=test
+
+#FROM eclipse-temurin:21
+#RUN mkdir /opt/app
+#COPY japp.jar /opt/app
+#CMD ["java", "-jar", "/opt/app/japp.jar"]
+
+
+#docker build --tag backend/test/1 --file Dockerfile_backend .
+#docker run -p 8080:8080 backend/test/1
+
+#docker build -t your-image-name .
+#docker run -p 3000:3000 your-image-name
+#docker run your-image-name
+#docker-compose up
+#pause, down (remove) , ps (status), logs, exec
