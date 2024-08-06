@@ -23,10 +23,8 @@ class Navbar extends Component {
                                     loading='lazy'
                                 />
                             </MDBNavbarBrand>
-                            <MDBNavbarBrand className='navbar-brand' style={{color: 'white', fontSize:'200%'}}>
-                                <a href='' style={{ textDecoration: 'none', color: 'inherit' }}>
-                                    Vanitas
-                                </a>
+                            <MDBNavbarBrand href='' className='text-white' style={{ fontSize: '200%' }}>
+                                Vanitas
                             </MDBNavbarBrand>
                         </MDBNavbarNav>
                         <MDBNavbarNav className='d-flex flex-row justify-content-center w-responsive'>

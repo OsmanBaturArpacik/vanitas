@@ -9,6 +9,7 @@ import {
     MDBTableBody,
     MDBTableHead
 } from "mdb-react-ui-kit";
+import {ToastError} from './ToastComponents';
 
 const Card = ({ data, pageUrl }) => (
     <MDBCard className='m-1' style={{ maxWidth: '600px',minHeight: '400px'}}>
@@ -48,17 +49,21 @@ const AddCard = ({ dataList, urlList }) => {
     const [cards, setCards] = useState([]);
 
     useEffect(() => {
-        if (dataList && dataList.length > 0) {
-            const newCards = dataList.map((innerArray, index) => {
-                // Assuming innerArray is an array from dataList, and index is used to access urlList
-                const pageUrl = urlList[index % urlList.length]; // Using % operator to cycle through urlList items
+        try {
+            if (dataList && dataList.length > 0) {
+                const newCards = dataList.map((innerArray, index) => {
+                    // Assuming innerArray is an array from dataList, and index is used to access urlList
+                    const pageUrl = urlList[index % urlList.length]; // Using % operator to cycle through urlList items
 
-                return (
-                    <Card key={index} data={innerArray} pageUrl={pageUrl} />
-                );
-            });
+                    return (
+                        <Card key={index} data={innerArray} pageUrl={pageUrl} />
+                    );
+                });
 
-            setCards(newCards);
+                setCards(newCards);
+            }
+        } catch (error) {
+            ToastError("Bir hata oluştu, \n" + error.message);
         }
     }, [dataList, urlList]);
 
