@@ -37,7 +37,7 @@ public class CrawlerService {
         // initial url push into list
         listOfPendingURLs.add(baseUrl);
         // traverse urls
-        while (!listOfPendingURLs.isEmpty() && listOfTraversedURLs.size() <= 5) {
+        while (!listOfPendingURLs.isEmpty() && listOfTraversedURLs.size() <= 100) {
             String urlString = listOfPendingURLs.remove(0);
 
             if (!listOfTraversedURLs.contains(urlString)) {
