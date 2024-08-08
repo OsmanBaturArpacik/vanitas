@@ -45,14 +45,18 @@ const Input = () => {
             if (url == null) {
                 throw new Error("Lütfen URL giriniz: www.example.org");
             }
-            if (!url.startsWith('www.')) {
-                throw new Error("Lütfen formata uygun URL giriniz: www.example.org");
+            // else if (!(url.includes("https://") || url.includes("http://")) && !url.startsWith('www.')) {
+            //     throw new Error("Lütfen formata uygun URL giriniz: www.example.org");
+            // }
+            else if (!(url.includes("https://") || url.includes("http://")) && !isUrlValid(protocol + url)) {
+                throw new Error("Lütfen formata uygun URL giriniz: www.example.org, example.org https://example.org, https://www.example.org");
             }
-            if (!isUrlValid(protocol + url)) {
-                throw new Error("Lütfen formata uygun URL giriniz: www.example.org");
+            else if (!(url.includes("https://") || url.includes("http://") || !isUrlValid(protocol + url))) {
+                apiTest(protocol + url);
+                ToastInfo(protocol + url + " için işlem başladı.");
             }
             else {
-                apiTest(protocol + url);
+                apiTest(url);
                 ToastInfo(protocol + url + " için işlem başladı.");
             }
         } catch (error) {
@@ -83,7 +87,7 @@ const Input = () => {
                                         </MDBDropdown>
                                     </MDBCol>
                                     <MDBCol md='8' className='d-flex justify-content-center py-1'>
-                                        <MDBInput label="URL" id="typeURL" type="url" placeholder="www.example.org"
+                                        <MDBInput label="URL" id="typeURL" type="url" placeholder="example.org"
                                                   value={url}
                                                   onChange={(e) => setUrl(e.target.value)}
                                         />
