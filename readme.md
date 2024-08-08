@@ -74,7 +74,7 @@
 >  ```
 >
 #### Video: [Kullanım ve kurulum videosu](https://www.loom.com/share/e7c3333469954d19a1173b0c89af56c0?sid=5b1c166a-e229-4385-96c8-f3ff6c482a8c)
-
+#### Sunum: [Sunum Linki](https://drive.google.com/drive/folders/1UT_ykWNRKOLNeRctnxrqjUZTQYbKiU0e?usp=sharing)
 <div id="contact">
     <h2>İletişim</h2>
 
