@@ -1,4 +1,4 @@
-# Türkçe Doğal Dil İşleme Yarışması Serbest Kategori - Teknofest
+# Türkçe Doğal Dil İşleme Yarışması <br> Serbest Kategori - TEKNOFEST
 
 ![Static Badge](https://img.shields.io/badge/java-21.0.6-red?style=flat-square)
 &nbsp; &nbsp; ![Static Badge](https://img.shields.io/badge/node-v20.12.0-red?style=flat&logo=nodedotjs&logoColor=green)
@@ -18,6 +18,7 @@
 ## Kullanılan Teknolojiler
 [![Static Badge](https://img.shields.io/badge/Java%20Spring---?style=for-the-badge&logo=spring&labelColor=white)](https://spring.io/)
 &nbsp; &nbsp; &nbsp;
+ [![Static Badge](https://img.shields.io/badge/react---?style=for-the-badge&logo=react&labelColor=white&color=lightblue)](https://react.dev/)
 
 ## Doğal Dil İşleme Kütüphanesi
 > ZEMBEREK
@@ -33,7 +34,7 @@
 >npm 10.5.1 <br>
 >[]()
 
-## Usage
+## Kullanım
 ##### 1. Clone this repository
 >  ```sh
 >    //open cmd
