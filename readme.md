@@ -13,6 +13,13 @@
 >[![Static Badge](https://img.shields.io/badge/Java%20Spring---?style=for-the-badge&logo=spring&labelColor=white)](https://spring.io/)
 &nbsp; &nbsp; &nbsp;
 
+## Kütüphaneler
+> ZEMBEREK
+
+## Veri seti
+> [479k English Words](https://www.kaggle.com/datasets/yk1598/479k-english-words)
+
+
 ## Kurulması Gereken Bağımlılıklar
 >java 21.0.6 <br>
 >apache maven wrapper 3.6.3 <br>
