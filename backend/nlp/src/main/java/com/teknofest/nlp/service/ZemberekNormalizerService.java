@@ -15,8 +15,9 @@ public class ZemberekNormalizerService {
     private final EnglishDictionaryService englishDictionaryService;
     private final IgnoreWordService ignoreWordService;
 
-    public ZemberekNormalizerService(EnglishDictionaryService englishDictionaryService) {
+    public ZemberekNormalizerService(EnglishDictionaryService englishDictionaryService, IgnoreWordService ignoreWordService) {
         this.englishDictionaryService = englishDictionaryService;
+        this.ignoreWordService = ignoreWordService;
     }
 
     public List<SuggestionModel> normalizeText(List<String> texts) {
