@@ -76,10 +76,7 @@
 
 <div id="contact">
     <h2>İletişim</h2>
-</div>
 
-<br>
-# 
 >&nbsp;[![Static Badge](https://img.shields.io/badge/Osman%20Batur%20Arpac%C4%B1k---?style=social&logo=linkedin&labelColor=white&color=lightblue)](https://www.linkedin.com/in/osman-batur-arpacik/)
 >&nbsp;[![Static Badge](https://img.shields.io/badge/OsmanBaturArpacik---?style=social&logo=github&labelColor=white&color=lightblue)](https://github.com/OsmanBaturArpacik)
 >&nbsp;[![Static Badge](https://img.shields.io/badge/osmanbatur%40outlook.com---?style=social&logo=gmail&logoColor=black&labelColor=white&color=lightblue)](mailto:osmanbatur@outlook.com)
@@ -87,3 +84,4 @@
 >&nbsp;[![Static Badge](https://img.shields.io/badge/Yunus%20Oz---?style=social&logo=linkedin&labelColor=white&color=lightblue)](https://www.linkedin.com/in/yunus-oz-90326169/)
 >&nbsp;[![Static Badge](https://img.shields.io/badge/YunusOz---?style=social&logo=github&labelColor=white&color=lightblue)](https://github.com/ozyunus)
 >&nbsp;[![Static Badge](https://img.shields.io/badge/ozyunus%40msn.com---?style=social&logo=gmail&logoColor=black&labelColor=white&color=lightblue)](mailto:ozyunus@msn.com)
+</div>
