@@ -12,7 +12,7 @@
 > Takım Adı: Vanitas <br>
 > Takım Id: 561863 <br>
 > Takım Kaptanı: Osman Batur Arpacık <br>
-> Takım üyesi: Yunus Öz <br>
+> Takım Üyesi: Yunus Öz <br>
 > <a href="#contact" class="button">İletişim</a>
 
 ## Kullanılan Teknolojiler
@@ -21,7 +21,7 @@
  [![Static Badge](https://img.shields.io/badge/react---?style=for-the-badge&logo=react&labelColor=white&color=lightblue)](https://react.dev/)
 
 ## Doğal Dil İşleme Kütüphanesi
-> ZEMBEREK
+> [ZEMBEREK](https://github.com/ahmetaa/zemberek-nlp)
 
 ## Kullanılan Açık Kaynak Veri Seti
 > [479k English Words](https://www.kaggle.com/datasets/yk1598/479k-english-words)
@@ -73,7 +73,7 @@
 >  
 >  ```
 >
-#### Video: [Kullanım ve kurulum videosu]()
+#### Video: [Kullanım ve kurulum videosu](https://www.loom.com/share/e7c3333469954d19a1173b0c89af56c0?sid=5b1c166a-e229-4385-96c8-f3ff6c482a8c)
 
 <div id="contact">
     <h2>İletişim</h2>
