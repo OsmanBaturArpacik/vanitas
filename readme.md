@@ -13,7 +13,7 @@
 > Takım Id: 561863 <br>
 > Takım Kaptanı: Osman Batur Arpacık <br>
 > Takım üyesi: Yunus Öz <br>
-> <a href="#iletişim" class="button">İletişime Git</a>
+> <a href="#contact" class="button">İletişime Git</a>
 > [İletişim](https://github.com/OsmanBaturArpacik/vanitas/edit/master/readme.md#contact)
 
 ## Kullanılan Teknolojiler
@@ -75,7 +75,9 @@
 >
 #### Video: [Kullanım ve kurulum videosu]()
 
-## İletişim
+<div id="contact">
+    <h2>İletişim</h2>
+</div>
 >&nbsp;[![Static Badge](https://img.shields.io/badge/Osman%20Batur%20Arpac%C4%B1k---?style=social&logo=linkedin&labelColor=white&color=lightblue)](https://www.linkedin.com/in/osman-batur-arpacik/)
 >&nbsp;[![Static Badge](https://img.shields.io/badge/OsmanBaturArpacik---?style=social&logo=github&labelColor=white&color=lightblue)](https://github.com/OsmanBaturArpacik)
 >&nbsp;[![Static Badge](https://img.shields.io/badge/osmanbatur%40outlook.com---?style=social&logo=gmail&logoColor=black&labelColor=white&color=lightblue)](mailto:osmanbatur@outlook.com)
