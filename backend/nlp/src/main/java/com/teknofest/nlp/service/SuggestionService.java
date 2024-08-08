@@ -23,21 +23,19 @@ public class SuggestionService {
 
 
     public JSONArray getNormalizedText(String url) {
-
-        //TODO: check null exception
         System.out.println(url);
         String htmlContent = fetchHtmlService.getContent(url);
         if (htmlContent == null) {
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "NULL EXCEPTION");
+            return null;
         }
         List<String> textList  = htmlToTextService.getContent(htmlContent);
         if (htmlContent == null) {
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "NULL EXCEPTION");
+            return null;
         }
 
         List<SuggestionModel> list = zemberekNormalizerService.normalizeText(textList);
         if (htmlContent == null) {
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "NULL EXCEPTION");
+            return null;
         }
         JSONArray jsonArray = createJsonArray(list);
 

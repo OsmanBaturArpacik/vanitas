@@ -5,7 +5,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class CrawlerService {
@@ -37,7 +36,7 @@ public class CrawlerService {
         // initial url push into list
         listOfPendingURLs.add(baseUrl);
         // traverse urls
-        while (!listOfPendingURLs.isEmpty() && listOfTraversedURLs.size() <= 100) {
+        while (!listOfPendingURLs.isEmpty() && listOfTraversedURLs.size() <= 10) {
             String urlString = listOfPendingURLs.remove(0);
 
             if (!listOfTraversedURLs.contains(urlString)) {

@@ -12,7 +12,8 @@ import java.util.List;
 
 @Service
 public class ZemberekNormalizerService {
-    private EnglishDictionaryService englishDictionaryService;
+    private final EnglishDictionaryService englishDictionaryService;
+    private final IgnoreWordService ignoreWordService;
 
     public ZemberekNormalizerService(EnglishDictionaryService englishDictionaryService) {
         this.englishDictionaryService = englishDictionaryService;
@@ -53,6 +54,11 @@ public class ZemberekNormalizerService {
                 if (englishDictionaryService.isEnglishWord(textOriginalContent)) {
 
                     System.out.println("text is English:" + textOriginalContent);
+                    continue;
+                }
+                if (ignoreWordService.isIgnoredWord(textOriginalContent)) {
+
+                    System.out.println("text is ignored word:" + textOriginalContent);
                     continue;
                 }
 
